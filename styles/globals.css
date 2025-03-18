@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Cyberpunk grid styles */
+.cyber-grid {
+  background-image: 
+    linear-gradient(to right, rgba(77, 255, 245, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(77, 255, 245, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center;
+}
+
+.cyber-grid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at center,
+    transparent 0%,
+    rgba(15, 15, 23, 0.8) 70%,
+    rgba(15, 15, 23, 0.95) 100%
+  );
+  pointer-events: none;
+}
+
+/* Custom opacity class */
+.opacity-15 {
+  opacity: 0.15;
+}
+
+/* Animation keyframes */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 15, 23, 0.95);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(77, 255, 245, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(77, 255, 245, 0.5);
+}
