@@ -5,6 +5,7 @@ const nextConfig = {
   images: { unoptimized: true },
   basePath: '/freestyle-lab',
   assetPrefix: '/freestyle-lab/',
+  trailingSlash: true,
 }
 
 module.exports = nextConfig
